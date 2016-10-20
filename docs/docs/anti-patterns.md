@@ -2,15 +2,18 @@
 id: anti-patterns
 title: Anti-patterns
 ---
-
+此页将会包含外界普遍出现的promise反模式。
 This page will contain common promise anti-patterns that are exercised in the wild.
 
 
+- [显示构造器的反模式](#the-explicit-construction-anti-pattern)
+- [.then(successs, fail)反模式](#the-explicit-construction-anti-pattern)
 - [The explicit construction anti-pattern](#the-explicit-construction-anti-pattern)
 - [The `.then(success, fail)` anti-pattern](#the-.then)
 
+##显示构造器反模式
 ##The Explicit Construction Anti-Pattern
-
+这是最普遍的反模式，有时候页脚promise构造器反模式。当你没有真正理解promise，或者将它当做金光闪闪的event emitters和callback机制的时候很容易掉进这个反模式。简而言之：
 This is the most common anti-pattern. It is easy to fall into this when you don't really understand promises and think of them as glorified event emitters or callback utility. It's also sometimes called the promise constructor anti-pattern. Let's recap: promises are about making asynchronous code retain most of the lost properties of synchronous code such as flat indentation and one exception channel. This pattern is also called the deferred anti-pattern.
 
 In the explicit construction anti-pattern, promise objects are created for no reason, complicating code.
