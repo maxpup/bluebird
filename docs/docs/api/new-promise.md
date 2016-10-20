@@ -13,9 +13,9 @@ title: new Promise
 new Promise(function(function resolve, function reject) resolver) -> Promise
 ```
 
-
+创建一个promise，传入一个密封promise生命周期的函数，这个函数需要函数resolve和reject作为参数。
 Create a new promise. The passed in function will receive functions `resolve` and `reject` as its arguments which can be called to seal the fate of the created promise.
-
+*注意：请在创建promise之前查看[explicit construction anti-pattern]({{ "/docs/anti-patterns.html#the-explicit-construction-anti-pattern" | prepend: site.baseurl }})
 *Note: See [explicit construction anti-pattern]({{ "/docs/anti-patterns.html#the-explicit-construction-anti-pattern" | prepend: site.baseurl }}) before creating promises yourself*
 
 Example:
