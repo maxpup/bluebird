@@ -15,7 +15,7 @@ title: .spread
 ) -> Promise
 ```
 
-
+就像调用'.then',但是完成值必须是个数组，这个数组被传进fulfillment handler。
 Like calling `.then`, but the fulfillment value _must be_ an array, which is flattened to the formal parameters of the fulfillment handler.
 
 ```js
@@ -31,7 +31,7 @@ Promise.all([
     }
 });
 ```
-
+当链式调用‘.spread’时，返回一个promise的数组同样可以。
 When chaining `.spread`, returning an array of promises also works:
 
 ```js
@@ -47,7 +47,7 @@ Promise.delay(500).then(function() {
     }
 });
 ```
-
+注意，如果使用ES6的时候，以上的代码需要用‘.then()’代替：
 Note that if using ES6, the above can be replaced with [.then()](.) and destructuring:
 
 ```js
