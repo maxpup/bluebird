@@ -16,7 +16,7 @@ Promise.join(
 ) -> Promise
 ```
 
-
+这是为了协调多个同时发生的不同的promise。尽管[`.all`](.)可以很好的处理一个可变大小列表的相同的promise，但当你有固定数量的不想关的promise的时候`Promise.join`能够更简单的同时协调它们。最后的参数——handler function，将会被所有fufilled的promise的结果激活。比如：
 For coordinating multiple concurrent discrete promises. While [`.all`](.) is good for handling a dynamically sized list of uniform promises, `Promise.join` is much easier (and more performant) to use when you have a fixed amount of discrete promises that you want to coordinate concurrently. The final parameter, handler function, will be invoked with the result values of all of the fufilled promises. For example:
 
 ```js
