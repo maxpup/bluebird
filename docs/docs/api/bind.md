@@ -12,7 +12,7 @@ title: .bind
 ```js
 .bind(any|Promise<any> thisArg) -> BoundPromise
 ```
-
+就像调用[Promise.bind(thisArg, thisPromise)](.).一样
 Same as calling [Promise.bind(thisArg, thisPromise)](.).
 </markdown></div>
 
