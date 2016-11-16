@@ -13,7 +13,7 @@ title: Promise.reject
 Promise.reject(any error) -> Promise
 ```
 
-
+创建一个给定‘error’reject的promise
 Create a promise that is rejected with the given `error`.
 </markdown></div>
 

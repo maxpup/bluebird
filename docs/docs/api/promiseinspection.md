@@ -19,7 +19,7 @@ interface PromiseInspection {
     boolean isCancelled()
 }
 ```
-
+这个接口由Promise实例实现，与[.reflect()](.)返回的PromiseInspection结果一样。
 This interface is implemented by `Promise` instances as well as the `PromiseInspection` result given by [.reflect()](.).
 </markdown></div>
 

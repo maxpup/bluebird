@@ -12,7 +12,7 @@ title: .isFulfilled
 ```js
 .isFulfilled() -> boolean
 ```
-
+和promise被满足相同。
 See if this promise has been fulfilled.
 </markdown></div>
 

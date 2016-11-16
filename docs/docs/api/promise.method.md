@@ -13,12 +13,15 @@ title: Promise.method
 Promise.method(function(...arguments) fn) -> function
 ```
 
-
+返回一个包装了参数`fn`的新函数。新函数会返回一个promise，这个promise会跟随原来promise的状态，原来的promise返回的值fulfill它或者抛出的异常reject它。
 Returns a new function that wraps the given function `fn`. The new function will always return a promise that is fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
 
+当一个函数有时会同时返回或者抛出错误的时候这种方法非常方便。
 This method is convenient when a function can sometimes return synchronously or throw synchronously.
 
+使用`Promise.method`的例子：
 Example without using `Promise.method`:
+
 
 ```js
 MyClass.prototype.method = function(input) {
@@ -36,7 +39,7 @@ MyClass.prototype.method = function(input) {
     });
 };
 ```
-
+使用了`Promise.method`后，不需要手动将返回或抛出值包装进promise。
 Using the same function `Promise.method`, there is no need to manually wrap direct return or throw values into a promise:
 
 ```js

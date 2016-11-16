@@ -16,7 +16,7 @@ Promise.try(function() fn) -> Promise
 Promise.attempt(function() fn) -> Promise
 ```
 
-
+使用`Promise.try`开始一个promise链。任何同步的异常都会rejected到返回的promise上去。
 Start the chain of promises with `Promise.try`. Any synchronous exceptions will be turned into rejections on the returned promise.
 
 ```js
@@ -29,9 +29,10 @@ function getUserById(id) {
     });
 }
 ```
-
+如果有人使用这个函数，他们会在Promise的`.catch处理函数中捕获所有的error，而不需要去处理同步和异步的异常流。
 Now if someone uses this function, they will catch all errors in their Promise `.catch` handlers instead of having to handle both synchronous and asynchronous exception flows.
 
+*为了兼容早期的ECMAScript版本，`Promise.attempt`作为别名提供给[`Promise.try`](.).*
 *For compatibility with earlier ECMAScript version, an alias `Promise.attempt` is provided for [`Promise.try`](.).*
 </markdown></div>
 
